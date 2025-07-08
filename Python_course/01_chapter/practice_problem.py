@@ -28,14 +28,14 @@ Tho' I know not what you are,
 Twinkle, twinkle, little star.""")
 
 
-# problem-2:  Use REPL(Read Evaluate Print Loop) and print the table of 5 using it
+# "problem-2":  Use REPL(Read Evaluate Print Loop) and print the table of 5 using it
 
 # Answer:
 
 # open terminal then write python then execute any operation like 5*1  then output 5 .
 
 
-# problem-3:  Install an external module and use it to perform an operation of your interest?
+# "problem-3":  Install an external module and use it to perform an operation of your interest?
 
 # Answer:
 
@@ -52,7 +52,7 @@ engine.runAndWait()
 
 
 
-# problem-4:  Write a python program to print the contents of a directory using the os module. Search online for the function which does that?
+# "problem-4":  Write a python program to print the contents of a directory using the os module. Search online for the function which does that?
 
 # Answer:
 
@@ -70,7 +70,7 @@ contents = os.listdir(directory_path)
 # Print the contents of the directory
 print(contents)
 
-# problem-5:  Label the program written in problem 4 with comments?
+#   "problem-5":  Label the program written in problem 4 with comments?
 
 # Answer:
 
