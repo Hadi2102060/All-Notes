@@ -151,3 +151,24 @@ SizedBox(
                   ),
 ```
 
+
+
+
+
+
+
+
+
+
+
+
+Platform  Firebase App Id
+web       1:153080448097:web:f0f16faeb7ad45225bd620
+android   1:153080448097:android:2afa117c820c188e5bd620
+ios       1:153080448097:ios:82b7c323254c3d5f5bd620
+macos     1:153080448097:ios:82b7c323254c3d5f5bd620
+windows   1:153080448097:web:014d0f593011afbd5bd620
+
+Learn more about using this file and next steps from the documentation:
+ > https://firebase.google.com/docs/flutter/setup
+

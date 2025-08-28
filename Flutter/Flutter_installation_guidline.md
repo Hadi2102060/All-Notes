@@ -85,3 +85,22 @@ go to the link and click visual studio community  **download preview**
 <img src="create_project2.jpg" alt="ফ্লাটার লোগো" hight="200" width="200"/>
 <img src="create_project3.jpg" alt="ফ্লাটার লোগো" hight="200" width="200"/>
 <img src="create_project4.jpg" alt="ফ্লাটার লোগো" hight="200" width="200"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+# android/app/google-service.json file er part: 
+
+```
+"storage_bucket": "adda-aa69b.firebasestorage.app"
+
+```
