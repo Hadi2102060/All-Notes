@@ -79,7 +79,12 @@ but when i use object oriented programming(OOPs) then the less code that i write
 
 
 
+last concept of dart :::
 
+1. Typedef (for the user defined function )
+2. Generic concept ( for list, map, sets same type data)
+3. Callable class(directly accessable class)
+4. async and await keywords( not synchronous way this is asynchronous and await means wait for loading data from server example of app)
 
 
 
