@@ -159,3 +159,114 @@ Lets assume iOS device ID is 00008030-001A444C3C58002D
             ```
             source ~/.bashrc
             ```
+
+
+## 5. flutter build (DIRECTORY) :
+
+   - flutter build কমান্ড: Flutter অ্যাপের সোর্স কোড থেকে প্ল্যাটফর্ম-নির্দিষ্ট আউটপুট (APK, AAB, IPA, Web ফাইল) তৈরি করে।
+
+   - কাজ: কোড কম্পাইল, assets অন্তর্ভুক্ত, এবং অপটিমাইজড বিল্ড তৈরি।
+
+   ```
+   - flutter build apk (Android-এর জন্য APK ফাইল তৈরি করে)
+   - flutter build appbundle (Google Play Store-এর জন্য AAB ফাইল)
+   - flutter build ios (iOS-এর জন্য IPA ফাইল)
+   - flutter build web (Web-এর জন্য HTML, CSS, JavaScript ফাইল)
+   ```
+   -  আপনি যদি আউটপুট ডিরেক্টরি কাস্টমাইজ করতে চান, তাহলে --output ফ্ল্যাগ ব্যবহার করতে পারেন। যেমন:
+
+   ```
+   flutter build apk --output=/custom/output/directory
+   ```
+
+
+## 6. flutter channel <CHANNEL_NAME> : 
+   - List or switch flutter channels
+
+## 7. flutter clean  : 
+   
+   - Delete the build/ and .dart_tool/ directory
+
+## 8. flutter config --build-dir = (directory):
+   
+
+   - configure flutter settings. To remove a setting, configure it to an empty string.
+
+## 9. flutter create (directory)
+
+   - creates a new project
+
+
+## 10. flutter custom-devices list
+
+  - add , delete , list, and reset custom devices
+
+## 11. flutter devices -d (device_ID) :
+
+   - List all connected devices
+
+
+## flutter doctor  :
+
+   - show information about the installed tooling
+
+
+## flutter downgrade :
+
+
+   - Downgrade flutter to the last active version for the current channel
+
+
+## flutter drive :
+
+  - Runs Flutter Driver tests for the current project
+
+
+## flutter emulators :
+
+  - List, launch and create emulators.
+
+## flutter gen-110n (directory) :
+
+  - Generate localizations for the Flutter project
+
+## flutter install -d (device_ID)
+
+  - Install a flutter app on an attached device 
+
+
+## flutter logs :
+
+  - show log output for running flutter apps 
+
+
+## flutter precache (Arguments):
+
+  - Populates the flutter tool's cache of binary artifacts.
+
+
+## flutter pub (Pub_command) :
+
+  - Works with packages. Use instead of dart pub
+
+## flutter run (Dart_file)
+
+ - Runs a flutter program
+
+
+## flutter screenshot :
+
+  - Take a screenshot of a flutter app from a connected device
+
+## flutter symbolize --input= (stack_track_file)
+
+  - Symbolize a stack trace from the AOT(ahead of time compiler) compiled flutter application
+
+## flutter test (DirectoryDart_File):
+
+   Runs tests in this package. Use instead of dart test
+
+
+## flutter upgrade  :
+
+  - Upgrade your copy of flutter 
