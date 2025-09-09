@@ -102,4 +102,41 @@
  -  Seamless Integration: কমান্ড লাইনে Flutter ব্যবহার করা সহজ এবং ভুল version থেকে রক্ষা পাওয়া যায়।
 
 
+# Essential commands for FVM : 
+
+
+### 1. fvm use   :
+  -  Set project SDK version
+
+  - fvm use 3.19.0 
+
+### 2. fvm  install :
+  - Download SDK Version 
+
+  - example : fvm install stable
+
+### 3. fvm list 
+  - Show installed versions 
+
+  - example : fvm list
+
+### 4. fvm global [version]
+   
+   - Set System default 
+
+   -example : fvm global 3.19.0
+
+### 5. fvm flutter [cmd]
+
+  - Run flutter commands 
+
+  - example: fvm flutter doctor
+
+### 6. fvm dart [cmd]
+
+  - Run Dart commands 
+
+  - example: fvm dart pub get
+
+
 
