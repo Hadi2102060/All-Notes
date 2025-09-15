@@ -29,6 +29,7 @@ class Home extends StatelessWidget {
     ).primaryColor; // ei primary color ta ami jekono jaygai use korte parbo
 
     return Scaffold(
+      backgroundColor: Colors.green,
       appBar: AppBar(
         backgroundColor: primaryColor,
         title: Text("Inherited Widget"),
