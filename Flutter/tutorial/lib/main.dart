@@ -1,6 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:tutorial/01_statefulWidget_tutorial.dart';
+import 'package:tutorial/02_Container_widget.dart';
+import 'package:tutorial/03_Row_and_column.dart';
+import 'package:tutorial/04_ListView_and_ListTile.dart';
 
 void main() {
   runApp(
@@ -124,7 +127,7 @@ class MyApp extends StatelessWidget {
             // 🔽 Page Content
             Expanded(
               child: ListView.builder(
-                padding: EdgeInsets.all(16),
+                padding: EdgeInsets.all(16.0),
                 itemCount: 10,
                 itemBuilder: (context, index) {
                   return Card(
@@ -138,7 +141,134 @@ class MyApp extends StatelessWidget {
             ),
 
             //Custom button
-            CustomButton("second Page"),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 40.0),  // ekhane bottom padding dilam jate kore button gulo bottom navigation bar + FAB er sathe overlap na kore
+              child: SingleChildScrollView(
+              
+                // ekhane SinglechildScrollView use korlam but she kintu jane na je bottomnavigation bar er hight somporke
+                // BottomAppBar + FAB(Floating Action Button) screen-এর নিচের জায়গা দখল করছে   
+                // কিন্তু SingleChildScrollView সেটা জানে না  তাই buttons bottom navigation bar এর সাথে overlap করছে
+                // eijonno body ke always bottomNavigationBar + FAB height মাথায় রেখে padding দিতে হয়
+              
+                // ekhon etar solution onujayi SingleChildScrollView কে নিচ থেকে একটু padding দাও।
+              
+              // esara alternate solution hote pare je : safearea diye wrap kora or BottomAppBar e Column diye wrap kore SigleChildScrollView kora 
+
+              
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    CustomButton("1"),
+                    ElevatedButton(onPressed: (){
+                      Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SecondPage(),
+                            ),
+                          );
+                    }, child: Text("2")),
+                    ElevatedButton(onPressed: (){
+                      Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ThirdPage(),
+                            ),
+                          );
+                    }, child: Text("3")),
+                    ElevatedButton(onPressed: (){
+                      Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => FourthPage(),
+                            ),
+                          );
+                    }, child: Text("4")),
+                    ElevatedButton(onPressed: (){
+                      Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MyApp(),
+                            ),
+                          );
+                    }, child: Text("5")),
+                    ElevatedButton(onPressed: (){
+                      Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MyApp(),
+                            ),
+                          );
+                    }, child: Text("6")),
+                    ElevatedButton(onPressed: (){
+                      Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MyApp(),
+                            ),
+                          );
+                    }, child: Text("7")),
+                    ElevatedButton(onPressed: (){
+                      Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MyApp(),
+                            ),
+                          );
+                    }, child: Text("8")),
+                    ElevatedButton(onPressed: (){
+                      Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MyApp(),
+                            ),
+                          );
+                    }, child: Text("9")),
+                    ElevatedButton(onPressed: (){
+                      Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MyApp(),
+                            ),
+                          );
+                    }, child: Text("10")),
+                    ElevatedButton(onPressed: (){
+                      Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MyApp(),
+                            ),
+                          );
+                    }, child: Text("11")),
+                    ElevatedButton(onPressed: (){
+                      Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MyApp(),
+                            ),
+                          );
+                    }, child: Text("12")),
+                    ElevatedButton(onPressed: (){
+                      Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MyApp(),
+                            ),
+                          );
+                    }, child: Text("13")),
+                    ElevatedButton(onPressed: (){
+                      Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MyApp(),
+                            ),
+                          );
+                    }, child: Text("14")),
+                
+                
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
@@ -157,7 +287,7 @@ class MyApp extends StatelessWidget {
         notchMargin: 8,
         color: const Color.fromARGB(255, 240, 184, 3),
         child: SizedBox(
-          height: 70,
+          height: 20,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -194,7 +324,7 @@ class CustomButton extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => SecondPage()),
+                MaterialPageRoute(builder: (context) => FirstPage()),
               );
             },
             child: Text(title),

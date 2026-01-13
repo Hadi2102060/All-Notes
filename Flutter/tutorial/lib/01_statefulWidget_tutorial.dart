@@ -3,14 +3,14 @@ import 'package:tutorial/02_Container_widget.dart';
 // import 'package:tutorial/Container_widget.dart';
 // import 'package:tutorial/main.dart';
 
-class SecondPage extends StatefulWidget {
-  const SecondPage({super.key});
+class FirstPage extends StatefulWidget {
+  const FirstPage({super.key});
 
   @override
-  State<SecondPage> createState() => _SecondPageState();
+  State<FirstPage> createState() => _FirstPageState();
 }
 
-class _SecondPageState extends State<SecondPage> {
+class _FirstPageState extends State<FirstPage> {
   String message = "";
   // int _currentIndex = 0;
 
@@ -71,7 +71,7 @@ class _SecondPageState extends State<SecondPage> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => ThirdPage()),
+                        MaterialPageRoute(builder: (context) => SecondPage()),
                       );
                     },
                     child: Text("Next Page"),

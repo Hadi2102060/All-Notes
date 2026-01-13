@@ -5,8 +5,8 @@ import 'package:tutorial/main.dart';
 // Note for using Container Widget in Flutter that  is  when you use the color in the Container Widget then you can not use the color in the decoration property of the Container Widget. You have to use either color or decoration property in the Container Widget.
 // But if you want to use both color and decoration property in the Container Widget then you have to use the color in the decoration property of the Container Widget only.
 
-class ThirdPage extends StatelessWidget {
-  const ThirdPage({super.key});
+class SecondPage extends StatelessWidget {
+  const SecondPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -139,7 +139,7 @@ class ThirdPage extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => FourthPage(),
+                              builder: (context) => ThirdPage(),
                             ),
                           );
                         },
