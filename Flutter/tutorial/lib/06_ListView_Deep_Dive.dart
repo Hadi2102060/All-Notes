@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tutorial/07_Stack_widget.dart';
+import 'package:tutorial/main.dart';
 
 class SixthPage extends StatefulWidget {
   const SixthPage({super.key});
@@ -100,6 +102,80 @@ class Basic extends StatelessWidget {
                   backgroundImage: AssetImage("assets/shuvo.jpg"),
                 ),
               ),
+
+            SizedBox(height: 100,),
+
+              Row(
+          children: [
+            Expanded(
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromARGB(255, 203, 247, 8),
+                ),
+                child: Text(
+                  "Previous Screen",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: const Color.fromARGB(255, 15, 15, 15),
+                  ),
+                ),
+              ),
+            ),
+
+
+
+            Expanded(
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SeventhPage ()),
+                    );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromARGB(255, 207, 8, 247),
+                ),
+                child: Text(
+                  "Next Screen",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: const Color.fromARGB(255, 255, 254, 254),
+                  ),
+                ),
+              ),
+            ),
+
+
+
+
+            Expanded(
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => MyApp()),
+                    );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromARGB(255, 84, 247, 8),
+                ),
+                child: Text(
+                  "Go to Home Screen",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: const Color.fromARGB(255, 12, 12, 12),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
             ],
           ),
         ),
@@ -147,7 +223,54 @@ class _VerticalState extends State<Vertical> {
 
 
 
-    ................
+    ................Card Style Divider (Box) banate chaile ei vabe korbe.............
+
+  return ListView.separated(
+      //
+      separatorBuilder: (context, index) {
+        return Container(
+          margin: EdgeInsets.symmetric(horizontal: 16),
+          height: 8,
+          decoration: BoxDecoration(
+            color: Colors.grey.shade200,
+            borderRadius: BorderRadius.circular(10),
+          ),
+        );
+      },
+
+
+
+      .............Icon + Divider (Fancy)..............
+
+    return ListView.separated(
+      
+      separatorBuilder: (context, index) {
+        return Row(
+          children: [
+            Expanded(child: Divider(thickness: 1)),
+            Icon(Icons.star, size: 16, color: Colors.amber),
+            Expanded(child: Divider(thickness: 1)),
+          ],
+        );
+      },
+
+
+......................Gradient Divider (Advanced 🔥)....................
+
+      return ListView.separated(
+      //
+      separatorBuilder: (context, index) {
+        return Container(
+          height: 2,
+          margin: EdgeInsets.symmetric(horizontal: 20),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.transparent, Colors.blue, Colors.transparent],
+            ),
+          ),
+        );
+      },
+
 
 
     */
@@ -186,25 +309,28 @@ class _HorizontalState extends State<Horizontal> {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-      //
+      scrollDirection: Axis.horizontal,
       separatorBuilder: (context, index) {
         return Container(
-          margin: EdgeInsets.symmetric(horizontal: 16),
-          height: 8,
+          height: 2,
+          margin: EdgeInsets.symmetric(horizontal: 20),
           decoration: BoxDecoration(
-            color: Colors.grey.shade200,
-            borderRadius: BorderRadius.circular(10),
+            gradient: LinearGradient(
+              colors: [Colors.transparent, Colors.blue, Colors.transparent],
+            ),
           ),
         );
       },
-
       itemCount: items.length,
       itemBuilder: (context, index) {
-        return ListTile(
-          title: Text("Item $index"),
-          leading: CircleAvatar(
-            backgroundColor: Colors.teal.shade300,
-            child: Text("$index"),
+        return SizedBox(
+          
+          height: 100,  
+          width: 90,
+          child: ListTile(
+            tileColor: Colors.lightGreenAccent,
+            title: Text("Item $index"),
+            
           ),
         );
       },
