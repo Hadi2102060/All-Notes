@@ -4,6 +4,8 @@ import 'package:tutorial/01_statefulWidget_tutorial.dart';
 import 'package:tutorial/02_Container_widget.dart';
 import 'package:tutorial/03_Row_and_column.dart';
 import 'package:tutorial/04_ListView_and_ListTile.dart';
+import 'package:tutorial/05_ListView_builder.dart';
+import 'package:tutorial/06_ListView_Deep_Dive.dart';
 
 void main() {
   runApp(
@@ -187,7 +189,7 @@ class MyApp extends StatelessWidget {
                       Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => MyApp(),
+                              builder: (context) => FifthPage(),
                             ),
                           );
                     }, child: Text("5")),
@@ -195,7 +197,7 @@ class MyApp extends StatelessWidget {
                       Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => MyApp(),
+                              builder: (context) => SixthPage(),
                             ),
                           );
                     }, child: Text("6")),
