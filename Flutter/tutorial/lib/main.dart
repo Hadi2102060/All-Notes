@@ -12,7 +12,10 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "My Flutter App",
-      theme: ThemeData(scaffoldBackgroundColor: Colors.cyan),
+      theme: ThemeData(scaffoldBackgroundColor: Colors.cyan,
+      appBarTheme: AppBarTheme(
+        backgroundColor: Colors.lightGreenAccent,
+      )),
 
       color: Colors.white,
       home: MyApp(),
