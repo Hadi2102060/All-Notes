@@ -6,6 +6,9 @@ import 'package:tutorial/03_Row_and_column.dart';
 import 'package:tutorial/04_ListView_and_ListTile.dart';
 import 'package:tutorial/05_ListView_builder.dart';
 import 'package:tutorial/06_ListView_Deep_Dive.dart';
+import 'package:tutorial/07_Stack_widget.dart';
+import 'package:tutorial/08_GridView.dart';
+import 'package:tutorial/09_GridView_builder.dart';
 
 void main() {
   runApp(
@@ -208,7 +211,7 @@ class MyApp extends StatelessWidget {
                       Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => MyApp(),
+                              builder: (context) => SeventhPage(),
                             ),
                           );
                     }, child: Text("7")),
@@ -216,7 +219,7 @@ class MyApp extends StatelessWidget {
                       Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => MyApp(),
+                              builder: (context) => EightPage(),
                             ),
                           );
                     }, child: Text("8")),
@@ -224,7 +227,7 @@ class MyApp extends StatelessWidget {
                       Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => MyApp(),
+                              builder: (context) => NinthPage(),
                             ),
                           );
                     }, child: Text("9")),
