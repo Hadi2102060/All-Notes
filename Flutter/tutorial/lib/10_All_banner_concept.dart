@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:tutorial/11_Card_Widget.dart';
+import 'package:tutorial/main.dart';
 
 class TenthPage extends StatefulWidget {
   const TenthPage({super.key});
@@ -27,7 +29,7 @@ class _TenthPageState extends State<TenthPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("GridView Builder and It's Property")),
+      appBar: AppBar(title: Text("All Banner  and It's Property")),
 
       /* 
     ................Animation করার সবচেয়ে সহজ ৫টা উপায়.........................
@@ -154,6 +156,68 @@ class _TenthPageState extends State<TenthPage> {
                   ),
                 ),
               ],
+            ),
+          ],
+        ),
+      ),
+
+
+
+
+      bottomNavigationBar: BottomAppBar(
+        color: const Color.fromARGB(255, 5, 250, 168),
+        child: Row(
+          children: [
+            Expanded(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromARGB(255, 32, 66, 55),
+                  foregroundColor: Colors.white,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MyApp()),
+                  );
+                },
+                child: Text(
+                  "Home Screen",
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+            Expanded(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromARGB(255, 32, 66, 55),
+                  foregroundColor: Colors.white,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => EleventhPage()),
+                  );
+                },
+                child: Text(
+                  "Next Screen",
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+            Expanded(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromARGB(255, 32, 66, 55),
+                  foregroundColor: Colors.white,
+                ),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text(
+                  "Previous Screen",
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+              ),
             ),
           ],
         ),

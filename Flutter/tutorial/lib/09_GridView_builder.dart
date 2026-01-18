@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:tutorial/10_All_banner_concept.dart';
+import 'package:tutorial/main.dart';
 
 class NinthPage extends StatefulWidget {
   const NinthPage({super.key});
@@ -146,7 +148,7 @@ class _NinthPageState extends State<NinthPage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Shirt",
+                              "Android Phone",
                               style: TextStyle(
                                 fontSize: 16,
                                 fontStyle: FontStyle.italic,
@@ -157,7 +159,7 @@ class _NinthPageState extends State<NinthPage> {
                             Row(
                               children: [
                                 Text(
-                                  "BDT 650.55",
+                                  "BDT 16500.55",
                                   style: TextStyle(
                                     fontSize: 12,
                                     fontStyle: FontStyle.italic,
@@ -215,7 +217,7 @@ class _NinthPageState extends State<NinthPage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Shirt",
+                              "Watch",
                               style: TextStyle(
                                 fontSize: 16,
                                 fontStyle: FontStyle.italic,
@@ -1568,6 +1570,65 @@ class _NinthPageState extends State<NinthPage> {
                   ),
                 ),
               ],
+            ),
+          ],
+        ),
+      ),
+
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.grey,
+        child: Row(
+          children: [
+            Expanded(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.lightBlueAccent,
+                  foregroundColor: Colors.red,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MyApp()),
+                  );
+                },
+                child: Text(
+                  "Home Screen",
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+            Expanded(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.lightBlueAccent,
+                  foregroundColor: Colors.red,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => TenthPage()),
+                  );
+                },
+                child: Text(
+                  "Next Screen",
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+            Expanded(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.lightBlueAccent,
+                  foregroundColor: Colors.red,
+                ),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text(
+                  "Previous Screen",
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+              ),
             ),
           ],
         ),
