@@ -9,6 +9,9 @@ import 'package:tutorial/06_ListView_Deep_Dive.dart';
 import 'package:tutorial/07_Stack_widget.dart';
 import 'package:tutorial/08_GridView.dart';
 import 'package:tutorial/09_GridView_builder.dart';
+import 'package:tutorial/10_All_banner_concept.dart';
+import 'package:tutorial/11_Card_Widget.dart';
+import 'package:tutorial/12_Text_widget.dart';
 
 void main() {
   runApp(
@@ -243,7 +246,7 @@ class MyApp extends StatelessWidget {
                       Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => MyApp(),
+                              builder: (context) => TenthPage(),
                             ),
                           );
                     }, child: Text("11")),
@@ -251,7 +254,7 @@ class MyApp extends StatelessWidget {
                       Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => MyApp(),
+                              builder: (context) => EleventhPage(),
                             ),
                           );
                     }, child: Text("12")),
@@ -259,7 +262,7 @@ class MyApp extends StatelessWidget {
                       Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => MyApp(),
+                              builder: (context) => TwelvePage(),
                             ),
                           );
                     }, child: Text("13")),
@@ -267,7 +270,7 @@ class MyApp extends StatelessWidget {
                       Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => MyApp(),
+                              builder: (context) => ThirdPage(),
                             ),
                           );
                     }, child: Text("14")),
